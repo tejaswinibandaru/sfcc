@@ -1,0 +1,26 @@
+<!--- TEMPLATENAME: userinfo.isml --->
+<isdecorate template="content/home/pt_storefront">
+<isinclude template="util/modules"/>
+<form action="${URLUtils.httpsContinue()}" method="post"
+	class="form-horizontal" id="UserRegistrationForm">
+	<fieldset>
+		<legend> ${Resource.msg('userinfo.heading','userinfo',null)}
+		</legend>
+		<isinputfield formfield="${pdict.CurrentForms.userinfo.email}"
+			type="input" />
+		<isinputfield formfield="${pdict.CurrentForms.userinfo.name}"
+			type="input" />
+		<isinputfield formfield="${pdict.CurrentForms.userinfo.country}"
+			type="input" />
+
+		<div class="form-row form-row-button">
+			<button type="submit"
+				value="${Resource.msg('userinfo.confirm','userinfo',null)}"
+				name="${pdict.CurrentForms.userinfo.confirm.htmlName}">
+				${Resource.msg('userinfo.confirm','userinfo',null)}</button>
+		</div>
+		<input type="hidden" name="${dw.web.CSRFProtection.getTokenName()}"
+			value="${dw.web.CSRFProtection.generateToken()}" />
+	</fieldset>
+</form>
+</isdecorate>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+<field formid="email" label="userinfo.email.label" type="string" mandatory="true" max-length="50"/>
+<field formid="name" label="userinfo.name.label" type="string" mandatory="true" max-length="50"/>
+<field formid="country" label="userinfo.country.label" type="string" max-length="50"/>
+
+<action formid="confirm" valid-form="true"/>
+</form>
